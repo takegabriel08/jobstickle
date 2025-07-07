@@ -17,7 +17,7 @@ class ListingFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->titleMale(),
+            'title' => $this->faker->jobTitle(),
             'tags' => 'laravel, livewire, backend',
             'company' => $this->faker->company(),
             'email' => $this->faker->email(),

@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Listings;
+use App\Livewire\Listing as ListingController;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('livewire.listings');
 // });
 Route::get('/', Listings::class);
-Route::get('/listings/{id}', Listings::class);
+Route::get('/listings/{id}', ListingController::class);
 
 // Route::get('/listings/{id}', function($id){
 //     return view('listing', [

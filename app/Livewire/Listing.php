@@ -17,6 +17,8 @@ class Listing extends Component
 
     public function render()
     {
-        return view('livewire.listing')->layout('layout');
+        return view('livewire.listing',[
+            'listing' => $this->listing
+        ])->layout('layout');
     }
 }

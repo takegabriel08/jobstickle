@@ -1,94 +1,56 @@
 <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <div class="mx-auto max-w-5xl">
-            <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">{{ dd($listing)}}</h2>
-            <div class="my-8 xl:mb-16 xl:mt-12">
-                <img class="w-full dark:hidden"
-                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-showcase.svg" alt="" />
-                <img class="hidden w-full dark:block"
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Job title: {{ $listing->title }}
+            </h2>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-4">Company: {{ $listing->company }}</h3>
+            <div class="flex items-center justify-center my-8 xl:mb-16 xl:mt-12">
+                <img class="max-w-xl lg:max-w-full dark:hidden" src="{{ asset('images/no-image.svg') }}" alt="" />
+                <img class="hidden max-w-xl lg:max-w-full dark:block"
                     src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-showcase-dark.svg" alt="" />
             </div>
+            <div class="flex items-center justify-evenly my-6 md:my-12">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
+                </svg>
+                <h4 class="text-xl font-semibold text-gray-900 dark:text-white">{{ $listing->location }}</h4>
+            </div>
+            <div class="flex items-center justify-evenly my-6 md:my-12">
+                <a href="mailto:{{$listing->email}}"
+                    class="px-5 py-3 text-base font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4 text-white me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 16">
+                        <path
+                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                        <path
+                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                    </svg>
+                    Large
+                </a>
+            </div>
+            <div class="flex items-center justify-evenly my-6 md:my-12">
+                <a href="{{ $listing->website }}"
+                    class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    Navigate to website
+                    <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
             <div class="mx-auto space-y-6">
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">The iMac "M1" 8-Core CPU/8-Core GPU/4
-                    USB-C Shaped Ports (2021) model features a 5-nm Apple M1 processor with 8 cores (4 performance cores
-                    and 4 efficiency cores), an 8-core GPU, a 16-core Neural Engine, 8 GB of onboard RAM, and a 1 TB
-                    onboard SSD.</p>
-
+                <h2 class="text-4xl font-extrabold dark:text-white">Job listing description</h2>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                    This all is housed in a wafer thin aluminum case with flat edges that includes a 23.5" 4480x2520,
-                    218 PPI, LED-backlit, "True Tone" widescreen "Retina 4.5K" display mounted on a svelte aluminum
-                    stand. This specific model is offered in the a two-tone Blue color. It also has an integrated 1080p
-                    FaceTime HD camera, a "studio-quality three-mic array" and a "high-fidelity six-speaker system" that
-                    supports Spatial Audio with Dolby Atmos.
+                    {{ $listing->description }}
                 </p>
-
-                <p class="text-base font-semibold text-gray-900 dark:text-white">Key Features and Benefits:</p>
-                <ul
-                    class="list-outside list-disc space-y-4 pl-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                    <li>
-                        <span class="font-semibold text-gray-900 dark:text-white"> Brilliant 4.5K Retina display:
-                        </span>
-                        see the big picture and all the detailsSee it all in sharp, glorious detail on the immersive
-                        24-inch 4.5K Retina display. The P3 wide color gamut brings what you're watching to life in over
-                        a billion colors. Images shine with a brilliant 500 nits of brightness. Industry-leading
-                        anti-reflective coating delivers greater comfort and readability. And True Tone technology
-                        automatically adjusts the color temperature of your display to the ambient light of your
-                        environment, for a more natural viewing experience. So whether you're editing photos, working on
-                        presentations, or watching your favorite shows and movies, everything looks incredible on iMac.
-                    </li>
-                    <li>
-                        <span class="font-semibold text-gray-900 dark:text-white"> 1080p FaceTime HD camera: </span>
-                        ready for your close-upIt's the best camera system ever in a Mac. Double the resolution for
-                        higher-quality video calls. A larger sensor that captures more light. And the advanced image
-                        signal processor (ISP) of M1 greatly improves image quality. So from collaborating with
-                        coworkers to catching up with friends and family, you'll always look your best.
-                    </li>
-
-                    <li>
-                        <span class="font-semibold text-gray-900 dark:text-white"> Studio-quality mics for high-quality
-                            conversations: </span>
-                        whether you're on a video call with a friend, cutting a track, or recording a podcast, the
-                        microphones on iMac make sure you come through loud, crisp, and clear. The studio-quality
-                        three-mic array is designed to reduce feedback, so conversations flow more naturally and you
-                        interrupt each other less. And beamforming technology helps the mics ignore background noise.
-                        Which means everyone hears you - not what's going on around you.
-                    </li>
-
-                    <li>
-                        <span class="font-semibold text-gray-900 dark:text-white"> Six-speaker sound system: audio that
-                            really fills a room: </span>
-                        the sound system on iMac brings incredible, room-filling audio to any space. Two pairs of
-                        force-canceling woofers create rich, deep bass without unwanted vibrations. And each pair is
-                        balanced with a high-performance tweeter. The result is a massive, detailed soundstage that
-                        takes your movies, music, and more to the next level.
-                    </li>
-
-                    <li>
-                        <span class="font-semibold text-gray-900 dark:text-white"> M1 chip: with great power comes great
-                            capability: </span>
-                        M1 is the most powerful chip Apple has ever made. macOS Big Sur is an advanced desktop operating
-                        system. Combined, they take iMac to entirely new levels of performance, efficiency, and
-                        security. iMac wakes from sleep almost instantly, apps launch in a flash, and the whole system
-                        feels fluid, smooth, and snappy. With up to 85 percent faster CPU performance and up to two
-                        times faster graphics performance than standard 21.5-inch iMac models, you can use apps like
-                        Xcode and Affinity Photo to compile code in a fraction of the time or edit photos in real time.
-                        And it runs cool and quiet even while tackling these intense workloads. That's the power of
-                        hardware, software, and silicon - all designed together.
-                    </li>
-                </ul>
             </div>
             {{-- <div class="my-6 md:my-12">
             </div> --}}
-            <div class="mx-auto mb-6 max-w-3xl space-y-6 md:mb-12">
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Connectivity includes two Thunderbolt
-                    / USB 4 ports and two USB 3 ports (all with a USB-C connector), a 3.5 mm headphone jack conveniently
-                    mounted on the left edge of the display, Wi-Fi 6 (802.11ax), and Bluetooth 5.0.</p>
-
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">A-Grade/CR: iMacs are in 9/10 Cosmetic
-                    Condition and are 100% Fully Functional. iMacs will be shipped in generic packaging and will contain
-                    generic accessories. 90 Days Seller Warranty Included. iMacs may show signs of wear like scratches,
-                    scuffs and minor dents.</p>
-            </div>
         </div>
     </div>
 </section>

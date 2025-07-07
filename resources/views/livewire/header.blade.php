@@ -1,6 +1,6 @@
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path fill="currentColor"
@@ -17,13 +17,13 @@
                 id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                 data-dropdown-placement="bottom">
                 <span class="sr-only">Open user menu</span>
-                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
+                <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="user photo">
             </button>
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
                 id="user-dropdown">
                 <div class="px-4 py-3">
-                    <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                    <span class="block text-sm text-gray-900 dark:text-white">Bonnie Blue</span>
                     <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
                 </div>
                 <ul class="py-2" aria-labelledby="user-menu-button">
@@ -57,7 +57,7 @@
                 </svg>
             </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+        {{-- <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
             <ul
                 class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
@@ -66,6 +66,6 @@
                         aria-current="page">Home</a>
                 </li>
             </ul>
-        </div>
+        </div> --}}
     </div>
 </nav>

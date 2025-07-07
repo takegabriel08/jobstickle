@@ -13,7 +13,6 @@
         @livewire('header')
         {{-- Output--}}
         {{-- @yield('content', $slot) --}}
-        @livewire('hero')
         {{ $slot }}
 
         @livewireScripts

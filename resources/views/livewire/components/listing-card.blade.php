@@ -6,12 +6,27 @@
         </a>
     </div>
     <div class="pt-6">
-        <a href="/listings/{{ $listing->id }}"
-            class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">{{ $listing->title }}</a>
-
-        <div class="mt-4 flex items-center justify-between gap-4">
+        <div class="mt-4 flex items-start gap-4">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M18.045 3.007 12.31 3a1.965 1.965 0 0 0-1.4.585l-7.33 7.394a2 2 0 0 0 0 2.805l6.573 6.631a1.957 1.957 0 0 0 1.4.585 1.965 1.965 0 0 0 1.4-.585l7.409-7.477A2 2 0 0 0 21 11.479v-5.5a2.972 2.972 0 0 0-2.955-2.972Zm-2.452 6.438a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+            </svg>
+            <a href="/listings/{{ $listing->id }}"
+                class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">{{ $listing->title }}
+            </a>
+        </div>
+        @livewire('components.listing-tags', ['tags' => $listing->tags, 'class' => 'mt-2'])
+        <div class="mt-4 flex items-start gap-4">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M4 4a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2v14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2V5a1 1 0 0 1-1-1Zm5 2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H9Zm5 0a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1Zm-5 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H9Zm5 0a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-1Zm-3 4a2 2 0 0 0-2 2v3h2v-3h2v3h2v-3a2 2 0 0 0-2-2h-2Z"
+                    clip-rule="evenodd" />
+            </svg>
             <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
-                {{ $listing->company }}</p>
+                {{ $listing->company }}
+            </p>
         </div>
         <div class="mt-4 flex items-center gap-4">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +37,8 @@
             </svg>
 
             <p class="text-m font-regular leading-tight text-gray-700 dark:text-white">
-                {{ $listing->location }}</p>
+                {{ $listing->location }}
+            </p>
         </div>
     </div>
 </div>

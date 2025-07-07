@@ -43,6 +43,7 @@
                     </svg>
                 </a>
             </div>
+            @livewire('components.listing-tags', ['tags' => $listing->tags])
             <div class="mx-auto space-y-6">
                 <h2 class="text-4xl font-extrabold dark:text-white">Job listing description</h2>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">

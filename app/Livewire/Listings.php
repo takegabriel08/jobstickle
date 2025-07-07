@@ -10,7 +10,7 @@ class Listings extends Component
     public function render()
     {
         return view('livewire.listings',[
-            'listings' => Listing::all()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
         ])->layout('layout');
     }
 }

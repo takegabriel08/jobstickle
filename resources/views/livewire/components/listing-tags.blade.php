@@ -3,6 +3,7 @@
 @endphp
 {{-- <div class="flex items-center justify-evenly my-6 md:my-12"> --}}
 <div class="{{ $class }}">
+    <h3 class="text-3xl text-gray-900 dark:text-white my-4">Tags:</h3>
     <ul class="flex">
         @foreach ($tags as $tag)
             <li class="flex items-center justify-center">

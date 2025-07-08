@@ -30,7 +30,7 @@
             </h2>
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-4">Company: {{ $listing->company }}</h3>
             <div class="flex items-center justify-center my-8 xl:mb-16 xl:mt-12">
-                <img class="max-w-xl lg:max-w-full"
+                <img class="rounded-md max-w-xl lg:max-w-full"
                     src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('images/no-image.svg') }}"
                     alt="" />
             </div>

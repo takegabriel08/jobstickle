@@ -18,11 +18,12 @@ class DeleteListing extends Component
     public function deleteListing()
     {
         $this->authorize('delete', $this->listing);
-        return redirect()->to('/')->with('success', 'Listing deleted successfully!');
 
         if ($this->listing->logo && Storage::disk('public')->exists($this->listing->logo)) {
             Storage::disk('public')->delete($this->listing->logo);
         }
+
+        $this->listing->delete();
 
         return redirect()->to('/')->with('success', 'Listing deleted successfully!');
     }

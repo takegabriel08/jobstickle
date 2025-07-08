@@ -30,6 +30,8 @@ class ShowCreateListing extends Component
             $validated['logo'] = $path;
         }
 
+        $validated['user_id'] = auth()->user()->id;
+
         ListingModel::create($validated);
 
         return redirect()->to('/')->with('success', 'Listing created');

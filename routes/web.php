@@ -22,7 +22,7 @@ use App\Livewire\Listing as ListingController;
 
 Route::get('/', Listings::class)->name('home');
 Route::get('/listings/create', ShowCreateListing::class)->middleware('auth')->name('create-job');
-Route::get('/listings/{listing}/edit', ShowEditListing::class);
+Route::get('/listings/{listing}/edit', ShowEditListing::class)->middleware('auth')->name('edit-job');
 Route::get('/listings/{listing}', ListingController::class);
 Route::get('/login', ShowLogin::class)->name('login');
 Route::get('/register', ShowRegister::class)->name('register');

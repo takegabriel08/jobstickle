@@ -1,9 +1,10 @@
 <?php
 
-use App\Livewire\ShowCreateListing;
 use App\Livewire\Listings;
-use App\Livewire\Listing as ListingController;
+use App\Livewire\ShowEditListing;
+use App\Livewire\ShowCreateListing;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Listing as ListingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', Listings::class);
 Route::get('/listings/create', ShowCreateListing::class);
+Route::get('/listings/{listing}/edit', ShowEditListing::class);
 Route::get('/listings/{listing}', ListingController::class);
 
 // Route::get('/listings/{id}', function($id){

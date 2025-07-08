@@ -32,9 +32,6 @@ class ShowCreateListing extends Component
 
         ListingModel::create($validated);
 
-        session()->flash('success', 'Listing created!');
-        $this->reset();
-
         return redirect()->to('/')->with('success', 'Listing created');
     }
     public function render()

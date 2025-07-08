@@ -12,7 +12,8 @@
                     Go back
                 </a>
                 <div class="flex items-center">
-                    <a href="/listings/{{$listing->id}}/edit" type="button">
+                    @livewire('delete-listing', ['listing' => $listing])
+                    <a href="/listings/{{ $listing->id }}/edit" type="button" data-tooltip-target="tooltip-edit">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -24,6 +25,11 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
+                    <div id="tooltip-edit" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                        edit listing
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
                 </div>
             </div>
             <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Job title: {{ $listing->title }}

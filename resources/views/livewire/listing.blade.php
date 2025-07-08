@@ -5,9 +5,9 @@
             </h2>
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-4">Company: {{ $listing->company }}</h3>
             <div class="flex items-center justify-center my-8 xl:mb-16 xl:mt-12">
-                <img class="max-w-xl lg:max-w-full dark:hidden" src="{{ asset('images/no-image.svg') }}" alt="" />
-                <img class="hidden max-w-xl lg:max-w-full dark:block"
-                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-showcase-dark.svg" alt="" />
+                <img class="max-w-xl lg:max-w-full dark:hidden" src="{{ $listing->image ? asset('storage/' . $listing->logo) : asset('images/no-image.svg') }}" alt="" />
+                {{-- <img class="hidden max-w-xl lg:max-w-full dark:block"
+                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-showcase-dark.svg" alt="" /> --}}
             </div>
             <div class="flex items-center justify-evenly my-6 md:my-12">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"

@@ -16,7 +16,7 @@ class ShowCreateListing extends Component
     {
         $validated = $this->validate([
             'title' => 'required',
-            'company' => ['required', Rule::unique('listings', 'company')],
+            'company' => ['required'],
             'location' => 'required',
             'website' => 'required|url',
             'file_input' => 'nullable|image|max:512',

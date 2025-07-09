@@ -14,7 +14,7 @@
                 <div class="flex items-center">
                     @if (auth()->check() && auth()->user()->id == $listing->user_id)
                         @livewire('delete-listing', ['listing' => $listing])
-                        <a href="/listing/{{$listing->id}}/edit" type="button" data-tooltip-target="tooltip-edit">
+                        <a href="/listings/{{$listing->id}}/edit" type="button" data-tooltip-target="tooltip-edit">
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 viewBox="0 0 24 24">

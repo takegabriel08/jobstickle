@@ -2,3 +2,10 @@
 @source '../../../../vendor/wire-elements/**/*.blade.php';
 @source '../../../../app/Filament/**/*';
 @source '../../../../resources/views/filament/**/*';
+
+@font-face {
+    font-family: "ManufacturingConsent";
+    src: url("../../../fonts/ManufacturingConsent/ManufacturingConsent-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}

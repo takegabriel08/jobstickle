@@ -7,6 +7,7 @@
         <title>Jobstickle</title>
         @livewireStyles
         <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="{{ asset('images/favicon.svg') }}">
         
     </head>
     <body class="bg-white dark:bg-gray-900">

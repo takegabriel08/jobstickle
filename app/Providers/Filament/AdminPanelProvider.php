@@ -34,6 +34,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->brandLogo(fn () => view('livewire.components.logo', ['classes' => '', 'href' => 'filament.admin.pages.dashboard', 'name'=> 'Jobstickle']))
             ->font('Poppins')
+            ->favicon('images/favicon.svg')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([

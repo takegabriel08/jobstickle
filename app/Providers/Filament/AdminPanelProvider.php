@@ -30,7 +30,12 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Blue[950],
+                'danger' => Color::Rose,
+                'gray' => Color::Gray,
+                'info' => Color::Cyan,
+                'primary' => Color::Indigo,
+                'success' => Color::Emerald,
+                'warning' => Color::Orange,
             ])
             ->brandLogo(fn () => view('livewire.components.logo', ['classes' => '', 'href' => 'filament.admin.pages.dashboard', 'name'=> 'Jobstickle']))
             ->font('Poppins')
